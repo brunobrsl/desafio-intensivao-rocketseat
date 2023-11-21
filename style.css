@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --primary-color: hsl(320, 69%, 42%);
+  --secondary-color: hsl(244, 38%, 28%);
+  --background-gradient: linear-gradient(96deg, #343193 0%, #302C63 99.68%);
+  --input-color: #312D64;
+}
+
+hmtl, body, input, textarea, button {
+  font-family: 'Mulish', sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+header {
+  width: 90%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+header img {
+  max-width: 72rem;
+}
+
+p {
+  color: var(--secondary-color);
+}
+
+.header-info {
+  margin-top: 1.6rem;
+  text-align: center;
+}
+
+.header-info h1 {
+  color: var(--primary-color);
+
+  font-size: 3.2rem;
+  font-weight: 900;
+}
+
+.header-info p {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.header-info button {
+  margin-top: 3.5rem;
+  border: .4rem solid var(--primary-color);
+  border-radius: 4rem;
+  cursor: pointer;
+}
+
+.header-info button:hover {
+  border-color: var(--secondary-color);
+}
+
+.header-info button img {
+  height: 10rem;
+  width: 5rem;
+}
+
+main {
+  background: #FFF;
+}
+
+.tips {
+  background: var(--background-gradient);
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxes {
+  background: #FFF;
+  width: 82%;
+  margin: 0 auto;
+  padding: 2.6rem;
+  border-radius: 2rem;
+}
+
+.boxes img {
+  width: 8rem;
+  height: 8rem;
+}
+
+.boxes h2 {
+  margin-top: 3.2rem;
+  color: var(--primary-color);
+  font-size: 2.8rem;
+  font-weight: 900;
+}
+
+.boxes p {
+  width: 90%; 
+  margin-top: 1.8rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.background-stars {
+  display: none;
+}
+
+form {
+  width: 82%;
+  margin: 7.8rem auto 6.4rem;
+}
+
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+fieldset h2 {
+  color: var(--primary-color);
+  font-size: 3.2rem;
+  font-weight: 900;
+}
+
+fieldset label {
+  display: none;
+  overflow: hidden;
+}
+
+fieldset input, 
+fieldset textarea {
+  color: var(--input-color);
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.6rem;
+}
+
+fieldset input {
+  padding: 1.2rem 1.6rem 1.2rem 5rem;
+  border-radius: 1.6rem;
+  border: 2px solid var(--input-color);
+  display: flex;
+}
+
+fieldset input[type=text] {
+  background: url('./assets/person.svg') no-repeat;
+  background-position-x: 1.4rem;
+  background-position-y: center;
+}
+
+fieldset input[type=email] {
+  background: url('./assets/at.svg') no-repeat;
+  background-position-x: 1.4rem;
+  background-position-y: center;
+}
+
+fieldset input::placeholder,
+fieldset textarea::placeholder {
+  color: var(--input-color);
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.6rem;
+}
+
+fieldset textarea {
+  padding: 1.2rem 1.6rem 1.6rem 1.6rem;
+  border: 2px solid var(--input-color);
+  border-radius: 1.6rem;
+}
+
+fieldset button {
+  background: var(--background-gradient);
+  color: #FFF;
+  width: 15.1rem;
+  padding: 1.2rem 1.6rem;
+  border: none;
+  border-radius: 1.6rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  text-transform: capitalize;
+}
+
+footer {
+  background: var(--background-gradient);
+  color: #FFF;
+  padding: 2.8rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  header img {
+    margin: 0 auto;
+    height: 70vh;
+  }
+
+  .boxes {
+    max-width: 36.6rem;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 2.8rem;
+  }
+  
+  header img {
+    width: 72rem;
+    height: 73.2rem;
+  }
+
+  .header-info {
+    margin-top: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+  }
+
+  .header-info h1 {
+    font-size: 5.8rem;
+  }
+
+  .header-info p {
+    font-size: 3.2rem;
+  }
+
+  .header-info button {
+    margin-top: 18rem;
+    width: 5.8rem;
+  }
+  
+  .tips {
+    flex-direction: row;
+  }
+
+  .boxes {
+    height: 44.8rem;
+  }
+
+  .boxes img {
+    width: 9.6rem;
+    height: 9.6rem;
+  }
+
+  .boxes h2 {
+    margin-top: 4rem;
+    font-size: 3.6rem;
+  }
+
+  .boxes p {
+    margin-top: 2.4rem;
+    font-size: 1.8rem;
+  }
+
+  form {
+    margin: 9.5rem 0 7.5rem 10.9rem;
+    width: 60%;
+  }
+
+  .form-area {
+    display: flex;
+    gap: 9.2rem;
+    margin: 0 auto;
+  }
+
+  .background-stars {
+    display: block;
+    width: 60%;
+    background: url('./assets/stars.svg') 50% / cover no-repeat;
+  }
+}
